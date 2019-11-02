@@ -8,21 +8,22 @@ using namespace std;
 int main()
 {
 
-	for (int i = 1; i <= 100; i++) {
+	for (int i = 1; i <= 100; ++i) {
 
+		string output = "";
 
-		if (((i % 3) == 0) && ((i % 5) == 0)) {
-		cout << "FizzBuzz\n";
+		if ((i % 3) == 0) {
+			output.append("Fizz");
 		}
-		else if ((i % 3) == 0) {
-			cout << "Fizz\n";
+		if ((i % 5) == 0) {
+			output.append("Buzz");
 		}
-		else if ((i % 5) == 0) {
-			cout << "Buzz\n";
+
+		if (output == "") {
+			cout << i;
 		}
-		else {
-			cout << i << endl;
-		}
+
+		cout << output << endl;
 
 	}
 }
