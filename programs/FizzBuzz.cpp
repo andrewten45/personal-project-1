@@ -10,20 +10,20 @@ int main()
 
 	for (int i = 1; i <= 100; ++i) {
 
-		string output = "";
+		string emptyString = "";
 
 		if ((i % 3) == 0) {
-			output.append("Fizz");
+			emptyString.append("Fizz");
 		}
 		if ((i % 5) == 0) {
-			output.append("Buzz");
+			emptyString.append("Buzz");
 		}
 
-		if (output == "") {
+		if (emptyString == "") {
 			cout << i;
 		}
 
-		cout << output << endl;
+		cout << emptyString << endl;
 
 	}
 }
