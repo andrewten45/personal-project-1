@@ -1,8 +1,20 @@
-// This program identifies whether an integer is a prime number or not.
+// This program identifies a fun meaning for natural numbers.
 
-int userNum;
+#include <iostream>
 
-cout << "Please enter a number: \n";
-cin >> userNum;
+using namespace std;
 
-if ((userNum //if it is prime.. what is prime?
+int main()
+{
+	int userNum;
+
+	cout << "Please enter a natural number: \n";
+
+	cin >> userNum;
+
+	switch (userNum) {
+		case 1:
+			cout << "1 is fun.\n";
+			break;
+	}
+}
