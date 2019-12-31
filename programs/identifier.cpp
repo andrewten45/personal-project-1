@@ -16,5 +16,10 @@ int main()
 		case 1:
 			cout << "1 is fun.\n";
 			break;
+		case 2:
+			cout << "2 is blue.\n";
+			break;
+		case 3:
+			cout << "3 is free.\n";
 	}
 }
