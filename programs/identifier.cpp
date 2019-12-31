@@ -1,4 +1,4 @@
-// This program identifies a fun meaning for natural numbers.
+// This program identifies a natural number with a fun meaning.
 
 #include <iostream>
 
