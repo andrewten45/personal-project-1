@@ -1,3 +1,5 @@
+//Login by Andrew T. It is designed to log a person in their account based on a username and corresponding password.
+
 #include <iostream>
 
 using namespace std;
