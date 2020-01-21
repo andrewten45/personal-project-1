@@ -1,4 +1,4 @@
-//Login by Andrew T. It is designed to log a person in their account based on a username and corresponding password.
+//Login manager by Andrew T. It is designed to handle logins a person may want to store discretely.
 
 #include <iostream>
 
