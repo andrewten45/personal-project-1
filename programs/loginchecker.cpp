@@ -1,4 +1,4 @@
-//Login manager by Andrew T. It is designed to handle logins a person may want to store discretely.
+//Login checker by Andrew T. It is designed to check for a correct login.
 
 #include <iostream>
 
