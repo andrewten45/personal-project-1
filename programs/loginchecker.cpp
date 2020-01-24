@@ -1,3 +1,6 @@
+// Login checker by Andrew T
+// This program checks if the user's input matches the set username and password.
+
 #include <iostream>
 
 using namespace std;
