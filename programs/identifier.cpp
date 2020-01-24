@@ -43,6 +43,21 @@ int main()
 	case 10:
 		cout << "10 is like a hen.\n";
 		break;
+	case 11:
+		cout << "11 turned it up to eleven.\n";
+		break;
+	case 12:
+		cout << "12 has a shelf.\n";
+		break;
+	case 13:
+		cout << "13...? let's not talk about 13...\n";
+		break;
+	case 14:
+		cout << "14 was almost named Courtney.\n";
+		break;
+	case 15:
+		cout << "15 is nifty.\n";
+		break;
 	default:
 		cout << "Unknown number.\n";
 		break;
