@@ -1,61 +1,56 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-
+	
 	//[WIP] Login manager by Andrew T. It is designed to handle logins a person may want to store discretely.
-
-
-	string userLogins[5][2];
+	string userNames[5];
+	string userPasses[5];
 	string userIn = "";
+	string userIn2 = "";
 	int userChoice;
 
-	for (int i = 0; i < 4; ++i) {
-		for (int j = 0; j < 1; ++j) {
-			userLogins[i][j] = "Null";
+	while (true) {
+		for (int i = 0; i < 5; ++i) {
+			userNames[i] = "Null";
+			userPasses[i] = "Null";
 		}
-	}
 
-	cout << "Welcome to the Login manager by Andrew T. You can save 5 logins using this program. \n\n";
-	cout << "Enter 1 to save a login in the format: USERNAME PASSWORD\n";
-	cout << "Enter 2 to view all of your logins.\n\n";
+		cout << "Welcome to the Login manager by Andrew T. You can save 5 logins using this program. \n\n";
+		cout << "Enter 1 to save a new login in the format: USERNAME PASSWORD\n";
+		cout << "Enter 2 to save a login in a specific cell.\n";
+		cout << "Enter 2 to view all of your logins.\n";
+		cout << "Enter 3 to quit.\n";
+		cout << endl;
 
-	cin >> userChoice;
-
-	if (userChoice == 1) {
-		cout << "You have chosen to save a login.\n";
-
-		cout << "In which cell would you like this login? Choices are: 0 - 4\n\n";
 		cin >> userChoice;
 
-		cout << "Please enter USERNAME:\n\n";
+		if (userChoice == 1) {
+			cout << "You have chosen to save a login.\n";
+			cout << "Please enter a login in the format USERNAME PASSWORD.\n";
 
-		cin >> userIn;
+			cin >> userIn >> userIn2;
 
-		userLogins[userChoice][0] = userIn;
+			//FIXME: Fix it such that I can use push_back to add new elements to the login vectors userNames and userPasses.
+			/*
+			userNames.push_back(userIn);
+			userPasses.push_back(userIn2);
+			*/
+		}
 
-
-		cout << "Please enter PASSWORD:\n\n";
-
-		cin >> userIn;
-
-		userLogins[userChoice][1] = userIn;
-
-		cout << "You entered: \n";
-		cout << userLogins[userChoice][0] << endl;
-		cout << userLogins[userChoice][1] << endl;
-	}
-
-	if (userChoice == 2) {
-		for (int i = 0; i < 4; ++i) {
-			for (int j = 0; i < 1; ++j) {
-				cout << userLogins[i][j] << endl;
+		if (userChoice == 3) {
+			for (int i = 0; i < 5; ++i) {
+				cout << userNames[i] << " " << userPasses[i];
+				cout << endl;
 			}
-			cout << endl;
+		}
+
+		if (userChoice == 4) {
+			break;
 		}
 	}
 
-	cout << "Thank you for using the program. The program will now close.\n";
 }
