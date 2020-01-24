@@ -1,3 +1,4 @@
+// Natural Number Identifier by Andrew T
 // This program identifies a natural number with a fun meaning.
 
 #include <iostream>
