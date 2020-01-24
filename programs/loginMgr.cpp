@@ -7,6 +7,7 @@ int main()
 {
 	
 	//[WIP] Login manager by Andrew T. It is designed to handle logins a person may want to store discretely.
+	//Note: This program contains several syntax errors below which render it inoperable.
 	string userNames[5];
 	string userPasses[5];
 	string userIn = "";
