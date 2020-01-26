@@ -8,14 +8,14 @@ using namespace std;
 void identifierNumShapes() {
 	int numPoints;
 	
-	cout << "Please enter the number of points you have:\n";
+	cout << "Please enter the number of vertices you have:\n";
 	cin >> numPoints;
 
 	cout << endl << endl;
 
 	cout << "You can make " << numPoints << " points.\n";
 	cout << "You can make " << numPoints / 2 << " lines.\n";
-	cout << "You can make " << numPoints / 3 << " rectangular prisms or cubes.\n";
+	cout << "You can make " << numPoints / 3 << " planes or cuboids.\n";
 }
 
 int main() {
