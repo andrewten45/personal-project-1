@@ -5,8 +5,7 @@
 
 using namespace std;
 
-int main()
-{
+void naturalNumberIdentifier() {
 	int userNum;
 
 	cout << "Please enter a natural number to get a neat response: \n";
@@ -63,4 +62,9 @@ int main()
 		cout << "Unknown number.\n";
 		break;
 	}
+}
+
+int main() {
+	naturalNumberIdentifier();
+	return 0;
 }
