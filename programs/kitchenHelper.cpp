@@ -1,6 +1,3 @@
-// kitchenHelper.cpp : This helps cooks in the kitchen with tips and other functions.
-// By Andrew T
-
 #include <iostream>
 
 using namespace std;
@@ -9,14 +6,19 @@ void kitchenHelper() {
 	int userIn = -1;
 	int numCooking = 0;
 	int numCooks = 0;
+	int userTemp = 0;
+	enum OvenState {OVEN_OFF, OVEN_ON};
+	OvenState ovenStatus = OVEN_OFF;
 
 	cout << "Welcome to the Kitchen Helper program.\n";
 	cout << "Input 0 to quit.\n";
-	cout << "Input 1 for some cooking tips.\n";
+	cout << "Input 1 for some basic cooking tips.\n";
 	cout << "Input 2 to enter the amount of things cooking.\n";
 	cout << "Input 3 to check how many things are cooking.\n";
 	cout << "Input 4 to enter the number of cooks working.\n";
 	cout << "Input 5 to check how many cooks are working.\n";
+	cout << "Input 6 to set the oven to set the oven's setting.\n";
+	cout << "Input 7 to check the oven's status.\n";
 
 	cin >> userIn;
 
@@ -75,6 +77,32 @@ void kitchenHelper() {
 			}
 			else {
 				cout << "There are " << numCooks << " cooks working.\n";
+			}
+		}
+		else if (userIn == 6) {
+			cout << "Please input 0 to turn the oven off and 1 to turn the oven on or change temp.\n";
+			cin >> userIn;
+
+			if (userIn == 0) {
+				ovenStatus = OVEN_OFF;
+				cout << "Oven is off.\n";
+			}
+			else if (userIn == 1) {
+				ovenStatus = OVEN_ON;
+				cout << "Oven is on.\n";
+
+				cout << "What temperature (F)?\n";
+				cin >> userTemp;
+				cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
+			}
+		}
+		else if (userIn == 7) {
+			if (ovenStatus == OVEN_OFF) {
+				cout << "Oven is off.\n";
+			}
+			else if (ovenStatus == OVEN_ON) {
+				cout << "Oven is on.\n";
+				cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
 			}
 		}
 
