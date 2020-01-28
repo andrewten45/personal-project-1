@@ -11,7 +11,7 @@ void kitchenHelper() {
 	int numCooking = 0;
 	int numCooks = 0;
 	int userTemp = 0;
-	enum OvenState {OVEN_OFF, OVEN_ON};
+	enum OvenState { OVEN_OFF, OVEN_ON };
 	OvenState ovenStatus = OVEN_OFF;
 
 	cout << "Welcome to the kitchen helper program by Andrew T.\n";
@@ -101,7 +101,7 @@ void kitchenHelper() {
 					cout << "Nobody's cooking.\n";
 				}
 				else if (numCooking == 1) {
-					cout << "There's " << numCooks << " cooks working.\n";
+					cout << "There's " << numCooks << " cook working.\n";
 				}
 				else {
 					cout << "There are " << numCooks << " cooks working.\n";
