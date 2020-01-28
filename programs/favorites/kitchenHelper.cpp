@@ -69,7 +69,12 @@ void kitchenHelper() {
 
 					cout << "What temperature (F)?\n";
 					cin >> userTemp;
-					cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
+					if (userTemp == 1) {
+						cout << "The oven is set to " << userTemp << " degree Fahrenheit.\n";
+					}
+					else {
+						cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
+					}
 				}
 			}
 			cout << endl;
@@ -113,7 +118,12 @@ void kitchenHelper() {
 				}
 				else if (ovenStatus == OVEN_ON) {
 					cout << "Oven is on.\n";
-					cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
+					if (userTemp == 1) {
+						cout << "The oven is set to " << userTemp << " degree Fahrenheit.\n";
+					}
+					else {
+						cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
+					}
 				}
 			}
 			cout << endl;
