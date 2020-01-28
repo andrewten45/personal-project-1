@@ -1,3 +1,6 @@
+// Kitchen helper by Andrew T
+// This program is designed to help cooks in the kitchen.
+
 #include <iostream>
 
 using namespace std;
