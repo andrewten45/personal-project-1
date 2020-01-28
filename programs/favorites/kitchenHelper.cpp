@@ -22,7 +22,6 @@ void kitchenHelper() {
 			cout << "Input 1 to enter the amount of things cooking.\n";
 			cout << "Input 2 to enter the number of cooks working.\n";
 			cout << "Input 3 to enter oven settings.\n";
-			cout << endl;
 			cin >> userIn2;
 
 			if (userIn2 == 0) {
@@ -73,6 +72,7 @@ void kitchenHelper() {
 					cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
 				}
 			}
+			cout << endl;
 		}
 		else if (userIn == 2) {
 			cout << "Input 0 to quit.\n";
@@ -116,14 +116,15 @@ void kitchenHelper() {
 					cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
 				}
 			}
+			cout << endl;
 		}
 
 		cout << "Input 0 to quit.\n";
 		cout << "Input 1 to enter data into the program.\n";
 		cout << "Input 2 to check data in the program.\n";
-		cout << endl;
 		cout << "Please enter an integer:\n";
 		cin >> userIn;
+		cout << endl;
 	}
 }
 
