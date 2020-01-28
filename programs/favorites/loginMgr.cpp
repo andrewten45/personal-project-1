@@ -1,3 +1,5 @@
+// Login manager by Andrew T
+// This program stores login info from the user.
 #include <iostream>
 #include <vector>
 
