@@ -5,13 +5,9 @@
 
 using namespace std;
 
-void naturalNumberIdentifier() {
-	int userNum;
+int userNum;
 
-	cout << "Please enter a natural number to get a neat response: \n";
-
-	cin >> userNum;
-
+void cases1To10() {
 	switch (userNum) {
 	case 1:
 		cout << "1 is fun.\n";
@@ -43,6 +39,13 @@ void naturalNumberIdentifier() {
 	case 10:
 		cout << "10 is like a hen.\n";
 		break;
+	default:
+		break;
+	}
+}
+
+void cases11To20() {
+	switch (userNum) {
 	case 11:
 		cout << "11 turned it up to eleven.\n";
 		break;
@@ -58,13 +61,35 @@ void naturalNumberIdentifier() {
 	case 15:
 		cout << "15 is nifty.\n";
 		break;
+	case 16:
+		cout << "16 can sick three.\n";
+		break;
+	case 17:
+		cout << "17 knows how to bend seams.\n";
+		break;
+	case 18:
+		cout << "18 can make a team.\n";
+		break;
+	case 19:
+		cout << "19 can bite mean.\n";
+		break;
+	case 20:
+		cout << "20 is plenty.\n";
+		break;
 	default:
-		cout << "Unknown number.\n";
 		break;
 	}
 }
 
+void naturalNumberIdentifier() {
+	cout << "Please enter a natural number to get a neat response: \n";
+
+	cin >> userNum;
+}
+
 int main() {
 	naturalNumberIdentifier();
+	cases1To10();
+	cases11To20();
 	return 0;
 }
