@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//FIXME: Find a way to not use global variables. Use different functions. Using return.
 int numCooking = 0;
 int numCooks = 0;
 int userTemp = 0;
