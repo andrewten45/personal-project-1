@@ -8,7 +8,7 @@ using namespace std;
 int numCooking = 0;
 int numCooks = 0;
 int userTemp = 0;
-enum OvenState { OVEN_OFF, OVEN_ON };
+enum OvenState {OVEN_OFF, OVEN_ON_BAKE, OVEN_ON_BROIL};
 OvenState ovenStatus = OVEN_OFF;
 
 void kitchenDataEntry() {
@@ -50,7 +50,7 @@ void kitchenDataEntry() {
 		}
 	}
 	else if (userString == "3") {
-		cout << "Please input 0 to turn the oven off and 1 to turn the oven on or change temp.\n";
+		cout << "Please input 0 to turn the oven off and 1 or 2 to turn on bake or broil, respectively.\n";
 		cin >> userString;
 
 		if (userString == "0") {
@@ -58,8 +58,21 @@ void kitchenDataEntry() {
 			cout << "Oven is off.\n";
 		}
 		else if (userString == "1") {
-			ovenStatus = OVEN_ON;
-			cout << "Oven is on.\n";
+			ovenStatus = OVEN_ON_BAKE;
+			cout << "Oven is on, and set to bake.\n";
+
+			cout << "What temperature (F)?\n";
+			cin >> userTemp;
+			if (userTemp == 1) {
+				cout << "The oven is set to " << userTemp << " degree Fahrenheit.\n";
+			}
+			else {
+				cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
+			}
+		}
+		else if (userString == "2") {
+			ovenStatus = OVEN_ON_BROIL;
+			cout << "Oven is on, and set to broil.\n";
 
 			cout << "What temperature (F)?\n";
 			cin >> userTemp;
@@ -112,8 +125,17 @@ void kitchenCheckStatus() {
 		if (ovenStatus == OVEN_OFF) {
 			cout << "Oven is off.\n";
 		}
-		else if (ovenStatus == OVEN_ON) {
-			cout << "Oven is on.\n";
+		else if (ovenStatus == OVEN_ON_BAKE) {
+			cout << "Oven is on, and set to bake.\n";
+			if (userTemp == 1) {
+				cout << "The oven is set to " << userTemp << " degree Fahrenheit.\n";
+			}
+			else {
+				cout << "The oven is set to " << userTemp << " degrees Fahrenheit.\n";
+			}
+		}
+		else if (ovenStatus == OVEN_ON_BROIL) {
+			cout << "Oven is on, and set to broil.\n";
 			if (userTemp == 1) {
 				cout << "The oven is set to " << userTemp << " degree Fahrenheit.\n";
 			}
