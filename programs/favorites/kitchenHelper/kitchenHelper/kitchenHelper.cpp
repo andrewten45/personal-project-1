@@ -12,16 +12,16 @@ enum OvenState { OVEN_OFF, OVEN_ON };
 OvenState ovenStatus = OVEN_OFF;
 
 void kitchenDataEntry() {
-	int userIn = -1;
+	string userString = "";
 
 	cout << "You want to enter data.\n";
 	cout << "Input 1 to enter the amount of things cooking.\n";
 	cout << "Input 2 to enter the number of cooks working.\n";
 	cout << "Input 3 to enter oven settings.\n";
 	cout << endl;
-	cin >> userIn;
+	cin >> userString;
 
-	if (userIn == 1) {
+	if (userString == "1") {
 		cout << "Please enter the number of things cooking:\n";
 		cin >> numCooking;
 
@@ -35,7 +35,7 @@ void kitchenDataEntry() {
 			cout << "There are " << numCooking << " things cooking.\n";
 		}
 	}
-	else if (userIn == 2) {
+	else if (userString == "2") {
 		cout << "Please enter the number of cooks working:\n";
 		cin >> numCooks;
 
@@ -49,15 +49,15 @@ void kitchenDataEntry() {
 			cout << "There are " << numCooks << " cooks working.\n";
 		}
 	}
-	else if (userIn == 3) {
+	else if (userString == "3") {
 		cout << "Please input 0 to turn the oven off and 1 to turn the oven on or change temp.\n";
-		cin >> userIn;
+		cin >> userString;
 
-		if (userIn == 0) {
+		if (userString == "0") {
 			ovenStatus = OVEN_OFF;
 			cout << "Oven is off.\n";
 		}
-		else if (userIn == 1) {
+		else if (userString == "1") {
 			ovenStatus = OVEN_ON;
 			cout << "Oven is on.\n";
 
@@ -76,7 +76,7 @@ void kitchenDataEntry() {
 }
 
 void kitchenCheckStatus() {
-	int userIn = -1;
+	string userString = "";
 
 	cout << "Hello. This is a test. You want to check the status.\n";
 	cout << "Input 0 to quit.\n";
@@ -84,9 +84,9 @@ void kitchenCheckStatus() {
 	cout << "Input 2 to check how many cooks are working.\n";
 	cout << "Input 3 to check the oven's status.\n";
 	cout << endl;
-	cin >> userIn;
+	cin >> userString;
 
-	if (userIn == 1) {
+	if (userString == "1") {
 		if (numCooking == 0) {
 			cout << "Nothing's cooking.\n";
 		}
@@ -97,7 +97,7 @@ void kitchenCheckStatus() {
 			cout << "There are " << numCooking << " things cooking.\n";
 		}
 	}
-	else if (userIn == 2) {
+	else if (userString == "2") {
 		if (numCooks == 0) {
 			cout << "Nobody's cooking.\n";
 		}
@@ -108,7 +108,7 @@ void kitchenCheckStatus() {
 			cout << "There are " << numCooks << " cooks working.\n";
 		}
 	}
-	else if (userIn == 3) {
+	else if (userString == "3") {
 		if (ovenStatus == OVEN_OFF) {
 			cout << "Oven is off.\n";
 		}
@@ -127,23 +127,23 @@ void kitchenCheckStatus() {
 }
 
 void startFunction() {
-	int userIn = -1;
+	string userString = "";
 
-	while (userIn != 0) {
+	while (userString != "0") {
 		cout << "Input 0 to quit.\n";
 		cout << "Input 1 to enter data into the program.\n";
 		cout << "Input 2 to check data in the program.\n";
 		cout << "Please enter an integer:\n";
 		cout << endl;
-		cin >> userIn;
+		cin >> userString;
 		
-		if (userIn == 0) {
+		if (userString == "0") {
 			break;
 		}
-		else if (userIn == 1) {
+		else if (userString == "1") {
 			kitchenDataEntry();
 		}
-		else if (userIn == 2) {
+		else if (userString == "2") {
 			kitchenCheckStatus();
 		}
 
