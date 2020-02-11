@@ -1,3 +1,2 @@
 ﻿  loginMgr.cpp
-C:\Users\pfff1\Documents\GitHub\personal-projects\programs\favorites\loginMgr\loginMgr\loginMgr.cpp(27,4): error C3861: 'loginSave': identifier not found
-C:\Users\pfff1\Documents\GitHub\personal-projects\programs\favorites\loginMgr\loginMgr\loginMgr.cpp(30,4): error C3861: 'loginView': identifier not found
+  loginMgr.vcxproj -> C:\Users\pfff1\Documents\GitHub\personal-projects\programs\favorites\loginMgr\Debug\loginMgr.exe
