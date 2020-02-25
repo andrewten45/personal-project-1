@@ -131,7 +131,7 @@ void enterOvenStatus() {
 void kitchenCheckStatus() {
 	string userString = "";
 
-	cout << "Hello. This is a test. You want to check the status.\n";
+	cout << "You want to check the status.\n";
 	cout << "Input 0 to quit.\n";
 	cout << "Input 1 to check how many things are cooking.\n";
 	cout << "Input 2 to check how many cooks are working.\n";
