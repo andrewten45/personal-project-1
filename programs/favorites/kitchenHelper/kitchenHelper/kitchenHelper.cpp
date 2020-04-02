@@ -9,7 +9,7 @@ using namespace std;
 int g_numCooking = 0;
 int g_numCooks = 0;
 int g_userTemp = 0;
-enum g_OvenState {OVEN_OFF, OVEN_ON_BAKE, OVEN_ON_BROIL};
+enum g_OvenState { OVEN_OFF, OVEN_ON_BAKE, OVEN_ON_BROIL };
 g_OvenState g_ovenStatus = OVEN_OFF;
 
 void checkNumCooking() {
@@ -185,7 +185,7 @@ void startFunction() {
 		cout << "Please enter an integer:\n";
 		cout << endl;
 		cin >> userString;
-		
+
 		if (userString == "0") {
 			break;
 		}
