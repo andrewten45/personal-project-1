@@ -131,12 +131,7 @@ void enterOvenStatus() {
 void kitchenCheckStatus() {
 	string userString = "";
 
-	cout << "You want to check the status.\n";
-	cout << "Input 0 to quit.\n";
-	cout << "Input 1 to check how many things are cooking.\n";
-	cout << "Input 2 to check how many cooks are working.\n";
-	cout << "Input 3 to check the oven's status.\n";
-	cout << endl;
+	menuOutput(3);
 	cin >> userString;
 
 	if (userString == "1") {
@@ -155,11 +150,7 @@ void kitchenCheckStatus() {
 void kitchenDataEntry() {
 	string userString = "";
 
-	cout << "You want to enter data.\n";
-	cout << "Input 1 to enter the amount of things cooking.\n";
-	cout << "Input 2 to enter the number of cooks working.\n";
-	cout << "Input 3 to enter oven settings.\n";
-	cout << endl;
+	menuOutput(2);
 	cin >> userString;
 
 	if (userString == "1") {
@@ -175,15 +166,40 @@ void kitchenDataEntry() {
 	cout << endl;
 }
 
-void startFunction() {
-	string userString = "";
-
-	while (userString != "0") {
+void menuOutput(int userOption) {
+	switch (userOption) {
+	case 1:
 		cout << "Input 0 to quit.\n";
 		cout << "Input 1 to enter data into the program.\n";
 		cout << "Input 2 to check data in the program.\n";
 		cout << "Please enter an integer:\n";
 		cout << endl;
+		break;
+	case 2:
+		cout << "You want to enter data.\n";
+		cout << "Input 1 to enter the amount of things cooking.\n";
+		cout << "Input 2 to enter the number of cooks working.\n";
+		cout << "Input 3 to enter oven settings.\n";
+		cout << endl;
+		break;
+	case 3:
+		cout << "You want to check the status.\n";
+		cout << "Input 0 to quit.\n";
+		cout << "Input 1 to check how many things are cooking.\n";
+		cout << "Input 2 to check how many cooks are working.\n";
+		cout << "Input 3 to check the oven's status.\n";
+		cout << endl;
+		break;
+	default:
+		break;
+	}
+}
+
+void startFunction() {
+	string userString = "";
+
+	while (userString != "0") {
+		menuOutput(1);
 		cin >> userString;
 
 		if (userString == "0") {
