@@ -12,6 +12,35 @@ int g_userTemp = 0;
 enum g_OvenState { OVEN_OFF, OVEN_ON_BAKE, OVEN_ON_BROIL };
 g_OvenState g_ovenStatus = OVEN_OFF;
 
+void menuOutput(int userOption) {
+	switch (userOption) {
+	case 1:
+		cout << "Input 0 to quit.\n";
+		cout << "Input 1 to enter data into the program.\n";
+		cout << "Input 2 to check data in the program.\n";
+		cout << "Please enter an integer:\n";
+		cout << endl;
+		break;
+	case 2:
+		cout << "You want to enter data.\n";
+		cout << "Input 1 to enter the amount of things cooking.\n";
+		cout << "Input 2 to enter the number of cooks working.\n";
+		cout << "Input 3 to enter oven settings.\n";
+		cout << endl;
+		break;
+	case 3:
+		cout << "You want to check the status.\n";
+		cout << "Input 0 to quit.\n";
+		cout << "Input 1 to check how many things are cooking.\n";
+		cout << "Input 2 to check how many cooks are working.\n";
+		cout << "Input 3 to check the oven's status.\n";
+		cout << endl;
+		break;
+	default:
+		break;
+	}
+}
+
 void checkNumCooking() {
 	if (g_numCooking == 0) {
 		cout << "Nothing's cooking.\n";
@@ -164,35 +193,6 @@ void kitchenDataEntry() {
 	}
 
 	cout << endl;
-}
-
-void menuOutput(int userOption) {
-	switch (userOption) {
-	case 1:
-		cout << "Input 0 to quit.\n";
-		cout << "Input 1 to enter data into the program.\n";
-		cout << "Input 2 to check data in the program.\n";
-		cout << "Please enter an integer:\n";
-		cout << endl;
-		break;
-	case 2:
-		cout << "You want to enter data.\n";
-		cout << "Input 1 to enter the amount of things cooking.\n";
-		cout << "Input 2 to enter the number of cooks working.\n";
-		cout << "Input 3 to enter oven settings.\n";
-		cout << endl;
-		break;
-	case 3:
-		cout << "You want to check the status.\n";
-		cout << "Input 0 to quit.\n";
-		cout << "Input 1 to check how many things are cooking.\n";
-		cout << "Input 2 to check how many cooks are working.\n";
-		cout << "Input 3 to check the oven's status.\n";
-		cout << endl;
-		break;
-	default:
-		break;
-	}
 }
 
 void startFunction() {

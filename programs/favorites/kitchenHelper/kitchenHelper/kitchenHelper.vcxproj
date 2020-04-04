@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{E929681C-D7FC-4026-B248-700BB28A67A8}</ProjectGuid>
+    <ProjectGuid>{8AC0DA14-E73C-4408-BAF6-A512A3104856}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>KitchenHelper</RootNamespace>
+    <RootNamespace>kitchenHelper</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,7 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="KitchenHelper.cpp" />
+    <ClCompile Include="kitchenHelper.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
