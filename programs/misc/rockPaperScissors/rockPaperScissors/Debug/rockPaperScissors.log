@@ -1,5 +1,1 @@
-﻿  rockPaperScissors.cpp
-C:\Users\andrew\Documents\GitHub\personal-projects\programs\misc\rockPaperScissors\rockPaperScissors\rockPaperScissors.cpp(73,30): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\andrew\Documents\GitHub\personal-projects\programs\misc\rockPaperScissors\rockPaperScissors\rockPaperScissors.cpp(78,30): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\andrew\Documents\GitHub\personal-projects\programs\misc\rockPaperScissors\rockPaperScissors\rockPaperScissors.cpp(17): warning C4715: 'stringToIntOption': not all control paths return a value
-  rockPaperScissors.vcxproj -> C:\Users\andrew\Documents\GitHub\personal-projects\programs\misc\rockPaperScissors\Debug\rockPaperScissors.exe
+﻿  rockPaperScissors.vcxproj -> C:\Users\andrew\Documents\GitHub\personal-projects\programs\misc\rockPaperScissors\Debug\rockPaperScissors.exe

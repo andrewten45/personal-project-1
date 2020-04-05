@@ -2,19 +2,6 @@
 
 #include <iostream>
 using namespace std;
-const int numLastOption = 3;
-
-int stringToIntOption(string userString) {
-    if (userString == "1") {
-        return 1;
-    }
-    else if (userString == "2") {
-        return 2;
-    }
-    else if (userString == "3") {
-        return 3;
-    }
-}
 
 void menuOutput(int userNum) {
     switch (userNum) {
@@ -32,25 +19,52 @@ void menuOutput(int userNum) {
     }
 }
 
-//FIXME: This function outputs "Draw" every time. Why?
-int newGame(int optionPlayer1, int optionPlayer2) {
+int newGame(string optionPlayer1, string optionPlayer2) {
     int result = 0;
 
     if (optionPlayer1 == optionPlayer2) {
         cout << "Draw.\n";
     }
     else {
-        if ((optionPlayer1 == optionPlayer2--) || ((optionPlayer1 == numLastOption && optionPlayer2 == 1))) {
+        if (
+            (optionPlayer1 == optionPlayer2) ||
+            (optionPlayer1 == "1" && optionPlayer2 == "2") || 
+            (optionPlayer1 == "2" && optionPlayer2 == "3") ||
+            (optionPlayer1 == "3" && optionPlayer2 == "1")
+            ) {
             cout << "Player 1 wins.\n";
             result = 1;
         }
-        else {
+        else if (
+            (optionPlayer1 == optionPlayer2) ||
+            (optionPlayer1 == "2" && optionPlayer2 == "1") ||
+            (optionPlayer1 == "3" && optionPlayer2 == "2") ||
+            (optionPlayer1 == "1" && optionPlayer2 == "3")
+            ) {
             cout << "Player 2 wins.\n";
             result = 2;
         }
     }
 
     return result;
+}
+
+int qComputer() {
+    //int number = (rand() % ((3 - 1 + 1) + 1));
+
+    /*
+    if (number == 1) {
+        return "1";
+    }
+    else if (number == 2) {
+        return "2";
+    }
+    else {
+        return "3";
+    }
+    */
+    
+    return 1;
 }
 
 void rockPaperScissors() {
@@ -60,25 +74,30 @@ void rockPaperScissors() {
     int scorePlayer2 = 0;
     string choicePlayer1 = "";
     string choicePlayer2 = "";
-    int numChoicePlayer1 = 0;
-    int numChoicePlayer2 = 0;
     int result = 0;
 
     cin >> userIn;
 
     while (userIn != "0") {
+        if (userIn == "1") {
+            cout << "Player 1's turn.\n";
+            menuOutput(2);
+            cin >> choicePlayer1;
+
+            cout << "Player 2's turn.\n";
+
+            result = newGame(choicePlayer1, "1");
+        }
         if (userIn == "2") {
             cout << "Player 1's turn.\n";
             menuOutput(2);
             cin >> choicePlayer1;
-            numChoicePlayer1 == stringToIntOption(choicePlayer1);
             
             cout << "Player 2's turn.\n";
             menuOutput(2);
             cin >> choicePlayer2;
-            numChoicePlayer2 == stringToIntOption(choicePlayer2);
 
-            result = newGame(numChoicePlayer1, numChoicePlayer2);
+            result = newGame(choicePlayer1, choicePlayer2);
 
             if (result == 1) {
                 scorePlayer1++;
@@ -88,6 +107,8 @@ void rockPaperScissors() {
             }
         }
 
+        cout << "Player 1's score: " << scorePlayer1 << endl;
+        cout << "Player 2's score: " << scorePlayer2 << endl;
         cin >> userIn;
     }
 }
