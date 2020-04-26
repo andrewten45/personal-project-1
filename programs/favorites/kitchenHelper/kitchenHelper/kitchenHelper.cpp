@@ -5,7 +5,25 @@
 
 using namespace std;
 
-void alphaMenu(int userOption) {
+class Kitchen {
+public:
+	void SetNumCooking();
+	void SetNumCooks();
+	void SetOvenStatus();
+	void SetOvenTemp();
+	void GetNumCooking();
+	void GetNumCooks();
+	void GetOvenStatus();
+	void GetOvenTemp();
+
+private:
+	int cooking = 0;
+	int cooks = 0;
+	int status = 0;
+	int ovenTemp = 0;
+};
+
+void AlphaMenu(int userOption) {
 	switch (userOption) {
 	case 1:
 		cout << "Input 0 to quit.\n";
@@ -34,52 +52,52 @@ void alphaMenu(int userOption) {
 	}
 }
 
-void checkNumCooking(int numCooking) {
-	if (numCooking == 0) {
+void Kitchen::GetNumCooking() {
+	if (cooking == 0) {
 		cout << "Nothing's cooking.\n";
 	}
-	else if (numCooking == 1) {
-		cout << "There's " << numCooking << " thing cooking.\n";
+	else if (cooking == 1) {
+		cout << "There's " << cooking << " thing cooking.\n";
 	}
 	else {
-		cout << "There are " << numCooking << " things cooking.\n";
+		cout << "There are " << cooking << " things cooking.\n";
 	}
 }
 
-void checkNumCooks(int numCooks) {
-	if (numCooks == 0) {
+void Kitchen::GetNumCooks() {
+	if (cooks == 0) {
 		cout << "Nobody's cooking.\n";
 	}
-	else if (numCooks == 1) {
-		cout << "There's " << numCooks << " cook working.\n";
+	else if (cooks == 1) {
+		cout << "There's " << cooks << " cook working.\n";
 	}
 	else {
-		cout << "There are " << numCooks << " cooks working.\n";
+		cout << "There are " << cooks << " cooks working.\n";
 	}
 }
 
-void checkOvenStatus(int ovenStatus) {
-	if (ovenStatus == 0) {
+void Kitchen::GetOvenStatus() {
+	if (status == 0) {
 		cout << "Oven is off.\n";
 	}
-	else if (ovenStatus == 1) {
+	else if (status == 1) {
 		cout << "Oven is on, and set to bake.\n";
 	}
-	else if (ovenStatus == 2) {
+	else if (status == 2) {
 		cout << "Oven is on, and set to broil.\n";
 	}
 }
 
-void checkOvenTemp(int ovenHeat) {
-	if (ovenHeat == 1) {
-		cout << "The oven is set to " << ovenHeat << " degree Fahrenheit.\n";
+void Kitchen::GetOvenTemp() {
+	if (ovenTemp == 1) {
+		cout << "The oven is set to " << ovenTemp << " degree Fahrenheit.\n";
 	}
 	else {
-		cout << "The oven is set to " << ovenHeat << " degrees Fahrenheit.\n";
+		cout << "The oven is set to " << ovenTemp << " degrees Fahrenheit.\n";
 	}
 }
 
-int enterNumCooking() {
+void Kitchen::SetNumCooking() {
 	int numCooking;
 	cout << "Please enter the number of items cooking:\n";
 	cin >> numCooking;
@@ -94,10 +112,10 @@ int enterNumCooking() {
 		cout << "There are " << numCooking << " things cooking.\n";
 	}
 
-	return numCooking;
+	cooking = numCooking;
 }
 
-int enterNumCooks() {
+void Kitchen::SetNumCooks() {
 	int numCooks;
 	cout << "Please enter the number of cooks working:\n";
 	cin >> numCooks;
@@ -112,10 +130,10 @@ int enterNumCooks() {
 		cout << "There are " << numCooks << " cooks working.\n";
 	}
 
-	return numCooks;
+	cooks = numCooks;
 }
 
-int enterOvenStatus() {
+void Kitchen::SetOvenStatus() {
 	string userString = "";
 	enum OvenState {OVEN_OFF, OVEN_ON_BAKE, OVEN_ON_BROIL};
 	OvenState ovenStatus = OVEN_OFF;
@@ -136,9 +154,9 @@ int enterOvenStatus() {
 		cout << "Oven is on, and set to broil.\n";
 	}
 
-	return ovenStatus;
+	status = ovenStatus;
 }
-int enterOvenTemp() {
+void Kitchen::SetOvenTemp() {
 	int ovenHeat;
 
 	cout << "What temperature (F)?\n";
@@ -151,18 +169,15 @@ int enterOvenTemp() {
 		cout << "The oven is set to " << ovenHeat << " degrees Fahrenheit.\n";
 	}
 
-	return ovenHeat;
+	ovenTemp = ovenHeat;
 }
 
 void primaryFunction() {
 	string userString = "";
-	int numCooking = 0;
-	int numCooks = 0;
-	int ovenSetting = 0;
-	int ovenHeat = 0;
+	Kitchen userKitchen;
 
 	while (userString != "0") {
-		alphaMenu(1);
+		AlphaMenu(1);
 		cin >> userString;
 
 		if (userString == "0") {
@@ -170,34 +185,34 @@ void primaryFunction() {
 		}
 		else if (userString == "1") {
 			userString = "";
-			alphaMenu(2);
+			AlphaMenu(2);
 			cin >> userString;
 
 			if (userString == "1") {
-				numCooking = enterNumCooking();
+				userKitchen.SetNumCooking();
 			}
 			else if (userString == "2") {
-				numCooks = enterNumCooks();
+				userKitchen.SetNumCooks();
 			}
 			else if (userString == "3") {
-				ovenSetting = enterOvenStatus();
-				ovenHeat = enterOvenTemp();
+				userKitchen.SetOvenStatus();
+				userKitchen.SetOvenTemp();
 			}
 		}
 		else if (userString == "2") {
 			userString = "";
-			alphaMenu(3);
+			AlphaMenu(3);
 			cin >> userString;
 
 			if (userString == "1") {
-				checkNumCooking(numCooking);
+				userKitchen.GetNumCooking();
 			}
 			else if (userString == "2") {
-				checkNumCooks(numCooks);
+				userKitchen.GetNumCooks();
 			}
 			else if (userString == "3") {
-				checkOvenStatus(ovenSetting);
-				checkOvenTemp(ovenHeat);
+				userKitchen.GetOvenStatus();
+				userKitchen.GetOvenTemp();
 			}
 			cout << endl;
 		}
