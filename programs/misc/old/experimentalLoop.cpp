@@ -9,17 +9,19 @@ void userFunction() {
 
 	cout << "This is an experimental loop.\n";
 
-	for (int i = 0; i < 10000; ++i) {
-		cout << i << endl;
+	while(userChar != 'Y' && userChar != 'y') {
+        for (int i = 0; i < 10000; ++i) {
+                cout << i << endl;
 
-		if (i == 5000) {
-			cout << "Stop the loop? Y or N\n";
-			cin >> userChar;
+            if (i % 5000 == 0 && i != 0) {
+                cout << "Stop the loop? Y or N\n";
+                cin >> userChar;
 
-			if (userChar == 'Y') {
-				break;
-			}
-		}
+                if (userChar == 'Y' || userChar == 'y') {
+                    break;
+                }
+            }
+        }
 	}
 }
 
