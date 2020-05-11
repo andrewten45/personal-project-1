@@ -21,7 +21,7 @@ void Intersection::AutoContinue() {
     cout << "Enter 0 to break from the loop.\n";
 
     while(userIn != "0") {
-        GenerateLightColor();
+        //GenerateLightColor();
         GetLightColor();
         cin >> userIn;
     }
