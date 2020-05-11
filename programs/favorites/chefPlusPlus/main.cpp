@@ -15,6 +15,7 @@ public:
 	void GetNumCooks();
 	void GetOvenStatus();
 	void GetOvenTemp();
+	void SafetyCheck();
 
 private:
 	int cooking = 0;
@@ -45,6 +46,7 @@ void AlphaMenu(int userOption) {
 		cout << "Input 1 to check how many things are cooking.\n";
 		cout << "Input 2 to check how many cooks are working.\n";
 		cout << "Input 3 to check the oven's status.\n";
+		cout << "Input 4 to check the safety status.\n";
 		cout << endl;
 		break;
 	default:
@@ -163,13 +165,35 @@ void Kitchen::SetOvenTemp() {
 	cin >> ovenHeat;
 
 	if (ovenHeat == 1) {
+        ovenTemp = ovenHeat;
 		cout << "The oven is set to " << ovenHeat << " degree Fahrenheit.\n";
 	}
 	else {
-		cout << "The oven is set to " << ovenHeat << " degrees Fahrenheit.\n";
+	    if (ovenHeat < 0) {
+            cout << "Error: Oven heat cannot be negative.\n";
+	    }
+	    else if (ovenHeat > 1000) {
+            cout << "Error: Oven heat cannot be greater than 1000.\n";
+	    }
+	    else {
+	        ovenTemp = ovenHeat;
+            cout << "The oven is set to " << ovenHeat << " degrees Fahrenheit.\n";
+	    }
 	}
-
-	ovenTemp = ovenHeat;
+}
+void Kitchen::SafetyCheck() {
+    cout << "Checking if the kitchen is safe.\n";
+    if (cooks > 0 || (cooks == cooking && cooks == status)) {
+        cout << "Kitchen is safe.\n";
+    }
+    else {
+        if (cooking != 0) {
+            cout << "WARNING: Items are cooking without cooks working.\n";
+        }
+        if (status != 0) {
+            cout << "WARNING: Oven is on without cooks working.\n";
+        }
+    }
 }
 
 void primaryFunction() {
@@ -213,6 +237,9 @@ void primaryFunction() {
 			else if (userString == "3") {
 				userKitchen.GetOvenStatus();
 				userKitchen.GetOvenTemp();
+			}
+			else if (userString == "4") {
+                userKitchen.SafetyCheck();
 			}
 			cout << endl;
 		}
