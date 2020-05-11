@@ -32,6 +32,7 @@
 *.app
 
 # Misc
+*.cbp
+*.depend
 *.layout
 *.o
-*.depend
