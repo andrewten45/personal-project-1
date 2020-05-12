@@ -2,9 +2,8 @@
 // This program is designed to help cooks in the kitchen.
 
 #include <iostream>
-using namespace std;
-
 #include "Kitchen.h"
+using namespace std;
 
 void AlphaMenu(int userOption) {
 	switch (userOption) {

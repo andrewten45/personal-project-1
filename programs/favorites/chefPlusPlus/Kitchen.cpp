@@ -1,7 +1,6 @@
 #include <iostream>
-using namespace std;
-
 #include "Kitchen.h"
+using namespace std;
 
 void Kitchen::GetNumCooking() {
 	if (cooking == 0) {
