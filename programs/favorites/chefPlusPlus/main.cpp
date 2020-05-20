@@ -1,5 +1,6 @@
 // Kitchen helper by Andrew T
 // This program is designed to help cooks in the kitchen.
+// TODO: Add recipes, ingredients, and feature to match ingredients with recipes.
 
 #include <iostream>
 #include "Kitchen.h"

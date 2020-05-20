@@ -130,16 +130,16 @@ void Kitchen::SetOvenTemp() {
 	}
 }
 void Kitchen::SafetyCheck() {
-    cout << "Checking if the kitchen is safe.\n";
+    cout << "Checking if the kitchen has common fire hazards.\n";
     if (cooks > 0 || (cooks == cooking && cooks == status)) {
-        cout << "Kitchen is safe.\n";
+        cout << "Kitchen has no common fire hazards.\n";
     }
     else {
         if (cooking != 0) {
-            cout << "WARNING: Items are cooking without cooks working.\n";
+            cout << "FIRE HAZARD: Items are cooking without cooks working.\n";
         }
         if (status != 0) {
-            cout << "WARNING: Oven is on without cooks working.\n";
+            cout << "FIRE HAZARD: Oven is on without cooks working.\n";
         }
     }
 }
