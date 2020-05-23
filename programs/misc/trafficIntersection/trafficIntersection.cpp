@@ -3,7 +3,7 @@
 #include "trafficIntersection.h"
 using namespace std;
 
-void Intersection::AutoContinue() {
+void trafficIntersection::AutoContinue() {
     string userIn;
 
     cout << "Enter 0 to break from the loop.\n";
@@ -15,21 +15,21 @@ void Intersection::AutoContinue() {
     }
 }
 
-void Intersection::CycleLightColors() {
+void trafficIntersection::CycleLightColors(int userNum1, int userNum2) {
     lightState = 0;
     GetLightColor();
-    _sleep(5 * 1000);
+    _sleep(userNum1 * 1000);
 
     lightState = 1;
     GetLightColor();
-    _sleep(2 * 1000);
+    _sleep(userNum2 * 1000);
 
     lightState = 2;
     GetLightColor();
-    _sleep(5 * 1000);
+    _sleep(userNum1 * 1000);
 }
 
-void Intersection::GetLightColor() {
+void trafficIntersection::GetLightColor() {
     switch(lightState) {
     case 0:
         cout << "Green\n";
@@ -43,7 +43,7 @@ void Intersection::GetLightColor() {
     }
 }
 
-void Intersection::SetLightColor() {
+void trafficIntersection::SetLightColor() {
     cout << "Enter light color, which can be either 0, 1, or 2.\n";
     cin >> lightState;
 }
