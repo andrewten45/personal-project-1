@@ -7,6 +7,9 @@ public:
     void GetLightColor();
     void AutoContinue();
     void CycleLightColors(int userNum1, int userNum2);
+    void DetectionLightColors();
+    void SetDetectTrue();
+    void SetDetectFalse();
 private:
     int lightState;
     bool isVehicleDetected;

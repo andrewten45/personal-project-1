@@ -29,6 +29,17 @@ void trafficIntersection::CycleLightColors(int userNum1, int userNum2) {
     _sleep(userNum1 * 1000);
 }
 
+void trafficIntersection::DetectionLightColors() {
+    if(isVehicleDetected == true && lightState == 2) {
+        lightState = 0;
+        GetLightColor();
+    }
+    else {
+        lightState = 2;
+        GetLightColor();
+    }
+}
+
 void trafficIntersection::GetLightColor() {
     switch(lightState) {
     case 0:
@@ -41,6 +52,14 @@ void trafficIntersection::GetLightColor() {
         cout << "Red\n";
         break;
     }
+}
+
+void trafficIntersection::SetDetectTrue() {
+    isVehicleDetected = true;
+}
+
+void trafficIntersection::SetDetectFalse() {
+    isVehicleDetected = false;
 }
 
 void trafficIntersection::SetLightColor() {
