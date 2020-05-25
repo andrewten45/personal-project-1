@@ -1,4 +1,4 @@
-// FizzBuzz.cpp : Plays the game of FizzBuzz up to 100.
+// fizzBuzz.cpp : Plays the game of FizzBuzz up to 100.
 // By Andrew Tennant, & borrowed from Tom Scott's video about the same type of program.
 
 #include <iostream>
