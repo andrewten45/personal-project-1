@@ -7,12 +7,18 @@ void numberAlgorithms::SetVectorSize(int num1) {
 }
 
 void numberAlgorithms::GetVectorSize() {
-    std::cout << vectorSize;
+    std::cout << "Vector size: " << vectorSize << std::endl;
 }
 
-void numberAlgorithms::SetMinAndMax() {}
+void numberAlgorithms::SetMinAndMax(int userMin, int userMax) {
+    numMin = userMin;
+    numMax = userMax;
+}
 
-void numberAlgorithms::GetMinAndMax() {}
+void numberAlgorithms::GetMinAndMax() {
+    std::cout << "Min number: " << numMin << std::endl;
+    std::cout << "Max number: " << numMax << std::endl;
+}
 
 void numberAlgorithms::GuessNumber() {}
 

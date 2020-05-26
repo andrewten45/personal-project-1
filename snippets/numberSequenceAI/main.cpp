@@ -6,6 +6,9 @@ int main()
 {
     numberAlgorithms userAlgorithms;
     int userNum = -1;
+    int userMin = INT_MAX;
+    int userMax = INT_MIN;
+
     std::cout << "Welcome to number sequence AI.\n";
     std::cout << "Please enter numbers; after each number hit enter and when finished, enter \"0\"\n";
 
@@ -23,9 +26,18 @@ int main()
     }
 
     userAlgorithms.SetVectorSize(userVector.size());
-
-    std::cout << "Size of vector: ";
     userAlgorithms.GetVectorSize();
+
+    for (int i = 0; i < userVector.size() - 1; ++i) {
+        if (userVector.at(i) < userMin) {
+            userMin = userVector.at(i);
+        }
+        if (userVector.at(i) > userMax) {
+            userMax = userVector.at(i);
+        }
+    }
+    userAlgorithms.SetMinAndMax(userMin, userMax);
+    userAlgorithms.GetMinAndMax();
 
     return 0;
 }
