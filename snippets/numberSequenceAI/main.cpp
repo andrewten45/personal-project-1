@@ -21,14 +21,14 @@ int main()
 
     std::cout << "You've entered:\n";
 
-    for (int i = 0; i < userVector.size() - 1; ++i) {
+    for (int i = 0; i < userVector.size() - 1; ++i) { //Displays numbers in the vector of user-entered values.
         std::cout << userVector.at(i) << std::endl;
     }
 
     userAlgorithms.SetVectorSize(userVector.size());
     userAlgorithms.GetVectorSize();
 
-    for (int i = 0; i < userVector.size() - 1; ++i) {
+    for (int i = 0; i < userVector.size() - 1; ++i) { //Finds the minimum and maximum values.
         if (userVector.at(i) < userMin) {
             userMin = userVector.at(i);
         }

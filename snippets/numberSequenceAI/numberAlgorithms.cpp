@@ -20,7 +20,9 @@ void numberAlgorithms::GetMinAndMax() {
     std::cout << "Max number: " << numMax << std::endl;
 }
 
-void numberAlgorithms::GuessNumber() {}
+void numberAlgorithms::GuessNumber() {
+    //Guesses a number between the min and max. If incorrect, tries again; if correct, continues to the next one, and so on.
+}
 
 void numberAlgorithms::SetSequence() {}
 
