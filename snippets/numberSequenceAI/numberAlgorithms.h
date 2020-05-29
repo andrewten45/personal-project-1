@@ -4,19 +4,20 @@
 
 class numberAlgorithms {
 public:
-    void SetVectorSize(int num1);
-    void GetVectorSize();
-    void SetMin(int userNum);
-    void SetMax(int userNum);
-    void GetMinAndMax();
+    void SetMin();
+    void SetMax();
+    void GetMin();
+    void GetMax();
     void GuessNumber();
-    void SetSequence();
-    void GetSequence();
+    void SetNumSequence();
+    void GetSizeNumSequence();
+    void GetNumSequence();
 private:
     int vectorSize = 0;
     int numMin;
     int numMax;
     int guessedNum;
+    std::vector<int> numSequence;
     std::vector<int> guessedSequence;
 };
 
