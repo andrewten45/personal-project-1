@@ -10,9 +10,12 @@ void numberAlgorithms::GetVectorSize() {
     std::cout << "Vector size: " << vectorSize << std::endl;
 }
 
-void numberAlgorithms::SetMinAndMax(int userMin, int userMax) {
-    numMin = userMin;
-    numMax = userMax;
+void numberAlgorithms::SetMin(int userNum) {
+    numMin = userNum;
+}
+
+void numberAlgorithms::SetMax(int userNum) {
+    numMin = userNum;
 }
 
 void numberAlgorithms::GetMinAndMax() {

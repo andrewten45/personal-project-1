@@ -6,7 +6,8 @@ class numberAlgorithms {
 public:
     void SetVectorSize(int num1);
     void GetVectorSize();
-    void SetMinAndMax(int userMin, int userMax);
+    void SetMin(int userNum);
+    void SetMax(int userNum);
     void GetMinAndMax();
     void GuessNumber();
     void SetSequence();
