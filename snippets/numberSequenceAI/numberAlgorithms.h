@@ -8,15 +8,18 @@ public:
     void SetMax();
     void GetMin();
     void GetMax();
-    void GuessNumber();
+    void GuessNumbers();
     void SetNumSequence();
     void GetSizeNumSequence();
     void GetNumSequence();
 private:
-    int vectorSize = 0;
     int numMin;
     int numMax;
     int guessedNum;
+    bool guessCorrect;
+    int numAttempts = 0;
+    int numMatches = 0;
+    int numMisses = 0;
     std::vector<int> numSequence;
     std::vector<int> guessedSequence;
 };

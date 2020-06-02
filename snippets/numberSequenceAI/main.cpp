@@ -18,6 +18,7 @@ int main()
     userAlgorithms.SetMin();
     userAlgorithms.GetMax();
     userAlgorithms.GetMin();
+    userAlgorithms.GuessNumbers();
 
     return 0;
 }
