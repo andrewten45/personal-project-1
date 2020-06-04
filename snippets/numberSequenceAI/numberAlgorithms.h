@@ -21,6 +21,7 @@ private:
     int numMatches = 0;
     int numMisses = 0;
     std::vector<int> numSequence;
+    std::vector<int> numsUsed;
     std::vector<int> guessedSequence;
 };
 

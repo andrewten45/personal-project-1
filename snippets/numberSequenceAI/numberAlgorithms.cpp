@@ -30,7 +30,6 @@ void numberAlgorithms::GetMax() {
 
 void numberAlgorithms::GuessNumbers() {
     //This function is intended to guess a number between the min and max. If incorrect, tries again; if correct, continues to the next one, and so on.
-    //TODO: Add a used guess vector to avoid duplicate guesses.
 
     for(int i = 0; i < numSequence.size() - 1; ++i) {
         guessCorrect = false;
@@ -39,15 +38,33 @@ void numberAlgorithms::GuessNumbers() {
             std::cout << "Guess: " << guessedNum << std::endl;
             numAttempts++;
 
-            if (guessedNum == numSequence.at(i)) {
+            if(guessedNum == numSequence.at(i)) {
                 std::cout << "Match\n";
                 guessCorrect = true;
                 numMatches++;
+                std::cout << "Clearing used number vector.\n";
+                numsUsed.clear();
             }
             else {
-                std::cout << "Incorrect guess; trying again\n";
-                numMisses++;
+                if(numsUsed.size() == 0) {
+                    std::cout << "Brand new used number vector & new incorrect guess; trying again & adding it to the used number vector.\n";
+                    numMisses++;
+                    numsUsed.push_back(guessedNum);
+                }
+                else {
+                    for(int i = 0; i < numsUsed.size(); ++i) {
+                        if(guessedNum == numsUsed.at(i)) {
+                            std::cout << "Guess already used.\n";
+                        }
+                        else {
+                            std::cout << "New incorrect guess; trying again & adding it to the used number vector.\n";
+                            numMisses++;
+                            numsUsed.push_back(guessedNum);
+                        }
+                    }
+                }
             }
+            //NOTE: Current vector of used numbers is buggy; it does not appear to deal with duplicate guesses well.
         }
     }
     std::cout << "Attempts: " << numAttempts << std::endl;
