@@ -30,15 +30,18 @@ void numberAlgorithms::GetMax() {
 
 void numberAlgorithms::GuessNumbers() {
     //This function is intended to guess a number between the min and max. If incorrect, tries again; if correct, continues to the next one, and so on.
+    //TODO: Fix out of range error.
 
     for(int i = 0; i < numSequence.size() - 1; ++i) {
         guessCorrect = false;
         while(guessCorrect == false) {
             guessedNum = rand() % (numMax - numMin + 1) + numMin;
             std::cout << "Guess: " << guessedNum << std::endl;
-            numAttempts++;
 
-            if(guessedNum == numSequence.at(i)) {
+            if(numsUsed.size() > 0 && guessedNum == numsUsed.at(i)) {
+                std::cout << "Guess already used.\n";
+            }
+            else if(guessedNum == numSequence.at(i)) {
                 std::cout << "Match\n";
                 guessCorrect = true;
                 numMatches++;
@@ -53,18 +56,14 @@ void numberAlgorithms::GuessNumbers() {
                 }
                 else {
                     for(int i = 0; i < numsUsed.size(); ++i) {
-                        if(guessedNum == numsUsed.at(i)) {
-                            std::cout << "Guess already used.\n";
-                        }
-                        else {
-                            std::cout << "New incorrect guess; trying again & adding it to the used number vector.\n";
-                            numMisses++;
-                            numsUsed.push_back(guessedNum);
-                        }
+                        std::cout << "New incorrect guess; trying again & adding it to the used number vector.\n";
+                        numMisses++;
+                        numsUsed.push_back(guessedNum);
                     }
                 }
             }
-            //NOTE: Current vector of used numbers is buggy; it does not appear to deal with duplicate guesses well.
+
+            numAttempts++;
         }
     }
     std::cout << "Attempts: " << numAttempts << std::endl;
