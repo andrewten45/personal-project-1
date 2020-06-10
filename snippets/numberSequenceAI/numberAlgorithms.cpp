@@ -30,7 +30,7 @@ void numberAlgorithms::GetMax() {
 
 void numberAlgorithms::GuessNumbers() {
     //This function is intended to guess a number between the min and max. If incorrect, tries again; if correct, continues to the next one, and so on.
-    //TODO: Fix out of range error.
+    //Simple guessing algorithm; allows repeat guesses due to previous difficulty.
 
     for(int i = 0; i < numSequence.size() - 1; ++i) {
         guessCorrect = false;
@@ -38,29 +38,14 @@ void numberAlgorithms::GuessNumbers() {
             guessedNum = rand() % (numMax - numMin + 1) + numMin;
             std::cout << "Guess: " << guessedNum << std::endl;
 
-            if(numsUsed.size() > 0 && guessedNum == numsUsed.at(i)) {
-                std::cout << "Guess already used.\n";
-            }
-            else if(guessedNum == numSequence.at(i)) {
+            if(guessedNum == numSequence.at(i)) {
                 std::cout << "Match\n";
                 guessCorrect = true;
                 numMatches++;
-                std::cout << "Clearing used number vector.\n";
-                numsUsed.clear();
             }
             else {
-                if(numsUsed.size() == 0) {
-                    std::cout << "Brand new used number vector & new incorrect guess; trying again & adding it to the used number vector.\n";
-                    numMisses++;
-                    numsUsed.push_back(guessedNum);
-                }
-                else {
-                    for(int i = 0; i < numsUsed.size(); ++i) {
-                        std::cout << "New incorrect guess; trying again & adding it to the used number vector.\n";
-                        numMisses++;
-                        numsUsed.push_back(guessedNum);
-                    }
-                }
+                std::cout << "Incorrect guess.\n";
+                numMisses++;
             }
 
             numAttempts++;
