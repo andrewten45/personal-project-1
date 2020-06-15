@@ -31,6 +31,7 @@ void numberAlgorithms::GetMax() {
 void numberAlgorithms::GuessNumbers() {
     //This function is intended to guess a number between the min and max. If incorrect, tries again; if correct, continues to the next one, and so on.
     //Simple guessing algorithm; allows repeat guesses due to previous difficulty.
+    //TODO: Add test vectors/ test benches
 
     for(int i = 0; i < numSequence.size() - 1; ++i) {
         guessCorrect = false;
