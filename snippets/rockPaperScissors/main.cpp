@@ -1,4 +1,5 @@
 // rockPaperScissors by Andrew T
+// This is a rock paper scissors game where you can play with the computer which makes random moves.
 
 #include <iostream>
 using namespace std;
@@ -28,7 +29,7 @@ int newGame(string optionPlayer1, string optionPlayer2) {
     else {
         if (
             (optionPlayer1 == optionPlayer2) ||
-            (optionPlayer1 == "1" && optionPlayer2 == "2") || 
+            (optionPlayer1 == "1" && optionPlayer2 == "2") ||
             (optionPlayer1 == "2" && optionPlayer2 == "3") ||
             (optionPlayer1 == "3" && optionPlayer2 == "1")
             ) {
@@ -63,7 +64,7 @@ int qComputer() {
         return "3";
     }
     */
-    
+
     return 1;
 }
 
@@ -92,7 +93,7 @@ void rockPaperScissors() {
             cout << "Player 1's turn.\n";
             menuOutput(2);
             cin >> choicePlayer1;
-            
+
             cout << "Player 2's turn.\n";
             menuOutput(2);
             cin >> choicePlayer2;
