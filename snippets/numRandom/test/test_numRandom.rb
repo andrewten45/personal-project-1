@@ -1,14 +1,25 @@
 #Test site
+#Code is debugged here, then the ruby file in lib is updated.
 
 class GenNumRandom
         def self.prompt
                 puts "How many times to generate a number?"
                 
                 numIterations = gets.to_i
-                if numIterations > 0
-                        puts "valid response"
+                if numIterations == 0
+                        puts "Ok, no times."
+                elsif numIterations == 1
+                        puts "Ok, " + numIterations.to_s + " time."
+
+                        self.gen
+                elsif numIterations > 1
+                        puts "Ok, " + numIterations.to_s + " times."
+
+                        for i in 1..numIterations
+                                self.gen
+                        end
                 else
-                        puts "invalid response"
+                        puts "Invalid input."
                 end
         end
         def self.gen
