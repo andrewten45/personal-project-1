@@ -1,4 +1,4 @@
-#Test site
+#Random number generator class
 
 class MyClass
         def self.generic_method

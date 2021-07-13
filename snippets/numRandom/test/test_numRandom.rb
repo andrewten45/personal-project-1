@@ -1,4 +1,4 @@
-#Test site
+#Test site for random number generator class
 #Code is debugged here, then the ruby file in lib is updated.
 
 class GenNumRandom
