@@ -15,7 +15,7 @@ class GenNumRandom
                 elsif numIterations > 1
                         puts "Ok, " + numIterations.to_s + " times."
 
-                        for i in 1..numIterations
+                        for i in 0..numIterations - 1
                                 self.gen
                         end
                 else
