@@ -2,38 +2,27 @@
 #Code is debugged here, then the ruby file in lib is updated.
 
 class GenNumRandom
-        def self.prompt
-                puts "How many times to generate a number?"
-                
-                numIterations = gets.to_i
+        def self.parameters
+                puts "Minimum number:"
+                numMin = gets.to_i
                 puts "\n"
-                numGens = 0
-                if numIterations == 0
-                        puts "Ok, no times."
-                elsif numIterations >= 1
-                        if numIterations == 1
-                                puts "Ok, " + numIterations.to_s + " time.\n\n"
 
-                                self.gen
-                                numGens = numGens + 1
-                                puts "Generation #" + numGens.to_s + "\n\n"
-                        else
-                                puts "Ok, " + numIterations.to_s + " times.\n\n"
+                puts "Maximum number:"
+                numMax = gets.to_i
+                puts "\n"
 
-                                for i in 0..numIterations - 1
-                                        self.gen
-                                        numGens = numGens + 1
-                                        puts "Generation #" + numGens.to_s + "\n\n"
-                                end
-                        end
-                else
-                        puts "Invalid input."
-                end
-        end
-        def self.gen
-                puts "Random number between 0 and 100. Result:"
-                puts rand(0 .. 100)
+                puts "How many times to generate a number?"
+                numIter = gets.to_i
+                puts "\n"
+
+                puts "You have set these parameters:"
+                puts "Minimum number: " + numMin.to_s
+                puts "Maximum number: " + numMax.to_s
+                puts "Iterations: " + numIter.to_s
+                puts "\n"
         end
 end
 
-GenNumRandom.prompt
+#TODO: Implement a loop containing the rand function with the parameters.
+
+GenNumRandom.parameters
