@@ -1,3 +1,5 @@
-id,word
-1,foo
-2,bar
+id,word,type
+1,foo,string
+2,bar,string
+3,[ ],char
+4,5,number
