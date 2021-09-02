@@ -13,3 +13,11 @@ CSV.foreach(("C:/Users/pfff1/Documents/GitHub/playground/snippets/parsing/poem.c
     puts row
     puts "\n"
 end 
+
+# Overall, it is kinda like digestion, except more abstraction at the end
+#  
+#
+#  CARBS -> SIMPLE SUGAR -> ENERGY -> PUNCH
+#  TEXT -> ANALYZED TEXT -> TREE STRUCTURES
+#
+#
