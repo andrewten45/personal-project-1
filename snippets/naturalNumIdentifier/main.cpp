@@ -1,5 +1,6 @@
 // Natural Number Identifier by Andrew T
 // This program identifies a natural number with a fun meaning.
+// Exercise with switch statement syntax...
 
 #include <iostream>
 
@@ -81,6 +82,40 @@ void cases11To20() {
 	}
 }
 
+void cases21To30() {
+    switch (userNum) {
+case 21:
+    cout << "21 can drink.\n";
+    break;
+case 22:
+    cout << "22 hears a who.\n";
+    break;
+case 23:
+    cout << "23 is just like me. \n";
+    break;
+case 24:
+    cout << "24 saw this before. \n";
+    break;
+case 25:
+    cout << "25 is alive. \n";
+    break;
+case 26:
+    cout << "26 is plenty thick. \n";
+    break;
+case 27:
+    cout << "27 is heavy leaven. \n";
+    break;
+case 28:
+    cout << "28 ain't one to hate. \n";
+    break;
+case 29:
+    cout << "29 is plenty fine. \n";
+    break;
+case 30:
+    cout << "30 is a birdy. \b";
+    break;}
+}
+
 void naturalNumberIdentifier() {
 	cout << "Please enter a natural number to get a neat response: \n";
 
@@ -89,7 +124,8 @@ void naturalNumberIdentifier() {
 
 int main() {
 	naturalNumberIdentifier();
-	cases1To10();
-	cases11To20();
+	//cases1To10();
+	//cases11To20();
+	cases21To30();
 	return 0;
 }
