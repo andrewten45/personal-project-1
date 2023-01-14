@@ -11,8 +11,8 @@ int main()
 	logins[0][0] = "username";
 	logins[1][0] = "password";
 
-	logins[0][1] = "username";
-	logins[1][1] = "password";
+	logins[0][1] = "admin";
+	logins[1][1] = "adminpass";
 	string userin = "";
 
 	while (true) {
@@ -20,13 +20,12 @@ int main()
 		cin >> userin;
 
 		for (int i = 0; i < 2; ++i) {
-			if (userin == logins[i][0]) {
-				cout << "Correct username.\n\n";
+			if (userin == logins[0][i]) {
+				cout << "User found.\n\n";
 				userin = "";
-				break;
 			}
 			else {
-				cout << "Incorrect username.\n\n";
+				cout << "Checking cell... User not found.\n\n";
 				continue;
 			}
 			break;
