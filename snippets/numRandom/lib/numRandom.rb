@@ -1,6 +1,6 @@
 #Random number generator class
 
-class GenNumRandom
+class PutNumRandom
         def self.gen
                 #Step 1: Gather user's input
                 puts "Minimum number:"
@@ -31,4 +31,12 @@ class GenNumRandom
         end
 end
 
-GenNumRandom.gen
+#Beginning work on a method that returns one random number
+class GenNumRandom
+        def self.gen
+                rand(0 .. 5)
+        end
+end
+
+#PutNumRandom.gen
+puts GenNumRandom.gen
