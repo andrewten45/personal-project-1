@@ -33,10 +33,14 @@ end
 
 #Beginning work on a method that returns one random number
 class GenNumRandom
-        def self.gen
+        def self.basic
                 rand(0 .. 5)
+        end
+        def self.seed
+                srand
         end
 end
 
 #PutNumRandom.gen
-puts GenNumRandom.gen
+#puts GenNumRandom.basic
+puts GenNumRandom.seed
