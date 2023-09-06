@@ -41,6 +41,8 @@ class GenNumRandom
         end
 end
 
+#Testing the output commands - how does .seed make a difference?
+
 #PutNumRandom.gen
-#puts GenNumRandom.basic
 puts GenNumRandom.seed
+puts GenNumRandom.basic
