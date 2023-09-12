@@ -1,4 +1,4 @@
-// Custom iterator by Andrew Tennant
+// Custom iterator by andrew
 // This program lets the user output a message along with its iteration number for a set amount of times.
 
 #include <iostream>
