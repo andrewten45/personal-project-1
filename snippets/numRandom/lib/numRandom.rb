@@ -34,7 +34,7 @@ end
 #Beginning work on a method that returns one random number
 class GenNumRandom
         def self.basic
-                rand(0 .. 5)
+                rand(0 .. 10)
         end
         def self.seed
                 srand
