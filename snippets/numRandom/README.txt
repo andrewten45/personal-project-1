@@ -1,4 +1,4 @@
-Random Number Generator by Andrew Tennant
+Random Number Generator by Andrew T
 
 - Generates a random number for the user
 - Meant to be concise & easy to read for what it does
