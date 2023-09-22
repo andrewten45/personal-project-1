@@ -4,5 +4,6 @@
 * Burner Note - Notes that aren't meant to saved - they are taken, then deleted securely
 * NameTablet - Backend lead table with custom icon functionality & memo
 * Pickinicker - Combines weather & food api's
+* Wait - Timer with elevator music/background
 
 * CountOnUs Consulting - Landing page for branding
