@@ -40,4 +40,4 @@ class GenNumRandom
 end
 
 #Utilization
-puts GenNumRandom.basic
+#puts GenNumRandom.basic
