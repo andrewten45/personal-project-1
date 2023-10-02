@@ -1,5 +1,6 @@
 #Random number generator class
 
+#Outputs a number to the screen
 class PutNumRandom
         def self.gen
                 #Step 1: Gather user's input
@@ -31,18 +32,12 @@ class PutNumRandom
         end
 end
 
-#Beginning work on a method that returns one random number
+#Returns one random number
 class GenNumRandom
         def self.basic
                 rand(0 .. 10)
         end
-        def self.seed
-                srand
-        end
 end
 
-#Testing the output commands - how does .seed make a difference?
-
-#PutNumRandom.gen
-puts GenNumRandom.seed
+#Utilization
 puts GenNumRandom.basic
