@@ -1,4 +1,4 @@
-Random Number Generator by Andrew T
+Random Number Generator by andrewten45
 
 - Generates an array of random numbers
 - Minimal syntax
