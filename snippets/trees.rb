@@ -1,4 +1,4 @@
-#trees.rb - makes organic tree art
+#trees.rb - makes organic tree art in terminal
 #TODO: class Forest
 
 class Tree
