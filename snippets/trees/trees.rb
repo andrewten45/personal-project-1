@@ -1,7 +1,8 @@
 #trees.rb - makes organic tree art in terminal
-#TODO: class Forest
 
 class Tree
+  attr_accessor :x, :y
+
   def initialize
     @height = 0
     @levels = []
@@ -26,6 +27,7 @@ class Tree
   end
 
   def coordinates
+    #TODO: this function
   end
 
   def to_s
