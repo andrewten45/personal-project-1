@@ -1,27 +1,25 @@
 // fizzBuzz.cpp : Plays the game of FizzBuzz up to 100.
-// By Andrew Tennant, & borrowed from Tom Scott's video about the same type of program.
+// By andrewten45, & borrowed from Tom Scott's video about the same type of program.
 
 #include <iostream>
-
-using namespace std;
 
 int main()
 {
 	for (int i = 1; i <= 100; ++i) {
 
-		string emptyString = "";
+		std::string emptyString = "";
 
 		if ((i % 3) == 0) {
-			emptyString.append("Fizz");
+			emptyString.append("fizz");
 		}
 		if ((i % 5) == 0) {
-			emptyString.append("Buzz");
+			emptyString.append("buzz");
 		}
 
 		if (emptyString == "") {
-			cout << i;
+			std::cout << i;
 		}
 
-		cout << emptyString << endl;
+		std::cout << emptyString << std::endl;
 	}
 }
