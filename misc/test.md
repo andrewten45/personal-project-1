@@ -1,3 +1,5 @@
 This is a word
 this is another word
 bla bla bla bla
+
+emoji 🎱
