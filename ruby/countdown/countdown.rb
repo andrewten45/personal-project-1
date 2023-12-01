@@ -1,4 +1,6 @@
 #Simple countdown timer
+#TODO: Make discrete by declaring def
+#TODO: Change variable names to something more readable
 s = 10
 
 s.times do |i|
